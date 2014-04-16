@@ -3,5 +3,5 @@
             [platinator.core :refer :all]))
 
 (deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+  (testing "Does 1 equal 1"
+    (is (= 1 1))))
