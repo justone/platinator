@@ -6,6 +6,11 @@ A reimplemtation of mtplates in clojure.
 
 No usage yet.
 
+## Alternates
+
+* <https://github.com/mrwacky42/mtplates>
+* <https://github.com/dmpeters/plates>
+
 ## License
 
 Copyright © 2014 Nate Jones
