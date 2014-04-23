@@ -1,5 +1,31 @@
 (ns platinator.core
-  (:gen-class))
+  (:gen-class)
+  (:require
+    [compojure.core :refer [defroutes GET]]
+    [compojure.handler :refer [site]]
+    [compojure.route :as route]
+    [org.httpkit.server :refer [run-server]]
+    [clojure.string :as string]
+    [platinator.reload :as reload]))
 
-(defn -main []
-  (println "I don't do a whole lot."))
+(defroutes app-routes
+  (GET "/" [] "Platinator")
+  (route/resources "/")
+  (route/not-found "Not Found"))
+
+(def app
+  (site app-routes))
+
+(defn -main [port]
+  (reload/start-nstracker)
+  (run-server (site #'app-routes) {:port (Integer. port)}))
+
+;(comment
+  ;(def stop-dev (dev-server))
+  ;(stop-dev)
+  ;)
+(defn dev-server
+  "Start a dev server with live-reload of namespaces"
+  []
+  (reload/start-nstracker)
+  (-main 8080))
