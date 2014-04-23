@@ -9,7 +9,7 @@ No usage yet.
 ## Alternates
 
 * <https://github.com/mrwacky42/mtplates>
-* <https://github.com/dmpeters/plates>
+* <https://github.com/dmpeters/placas>
 
 ## License
 
