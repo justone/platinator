@@ -5,6 +5,7 @@
     [compojure.core :refer [defroutes GET POST]]
     [compojure.handler :refer [site]]
     [compojure.route :as route]
+    [ring.util.response :refer [redirect]]
     [org.httpkit.server :refer [run-server]]
     [clojure.string :as string]
     [platinator.reload :as reload]
@@ -25,7 +26,7 @@
       users))))
 
 (defroutes app-routes
-  (GET "/" [] "Platinatorrr")
+  (GET "/" [] (redirect "index.html"))
   (POST "/find" {body :body} (find-user-by-email (slurp body)))
   (route/resources "/")
   (route/not-found "Not Found"))

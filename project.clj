@@ -10,4 +10,5 @@
                  [javax.servlet/servlet-api "2.5"]
                  [ns-tracker "0.2.2"]
                  [cheshire "5.3.1"]]
+                 [ring "1.2.2"]]
   :main platinator.core)
