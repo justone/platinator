@@ -4,13 +4,14 @@
     [compojure.core :refer [defroutes GET]]
     [compojure.handler :refer [site]]
     [compojure.route :as route]
+    [ring.util.response :refer [redirect]]
     [org.httpkit.server :refer [run-server]]
     [clojure.string :as string]
     [platinator.reload :as reload]
     [clojure.java.browse :as browse]))
 
 (defroutes app-routes
-  (GET "/" [] "Platinator")
+  (GET "/" [] (redirect "index.html"))
   (route/resources "/")
   (route/not-found "Not Found"))
 
