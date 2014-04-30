@@ -1,0 +1,31 @@
+[
+   {
+      "_type":"user",
+      "email":"neil@domain.com",
+      "name":"Neil Wurster",
+      "licenses":[
+         "WURSTER"
+      ],
+      "tags":[
+         "2234"
+      ]
+   },
+   {
+      "_type":"user",
+      "email":"katy@domain.com",
+      "name":"Katy Kalina",
+      "licenses":[
+         "1ABC234"
+      ]
+   },
+   {
+      "_type":"user",
+      "email":"darren@domain.com",
+      "admin":1,
+      "cell":"5551235555",
+      "name":"Darren Danis",
+      "tags":[
+         "2423"
+      ]
+   }
+]

@@ -8,5 +8,6 @@
                  [http-kit "2.1.18"]
                  [compojure "1.1.6"]
                  [javax.servlet/servlet-api "2.5"]
-                 [ns-tracker "0.2.2"]]
+                 [ns-tracker "0.2.2"]
+                 [cheshire "5.3.1"]]
   :main platinator.core)
