@@ -6,7 +6,8 @@
     [compojure.route :as route]
     [org.httpkit.server :refer [run-server]]
     [clojure.string :as string]
-    [platinator.reload :as reload]))
+    [platinator.reload :as reload]
+    [clojure.java.browse :as browse]))
 
 (defroutes app-routes
   (GET "/" [] "Platinator")
@@ -28,4 +29,5 @@
   "Start a dev server with live-reload of namespaces"
   []
   (reload/start-nstracker)
+  (browse/browse-url "http://localhost:8080/")
   (-main 8080))
