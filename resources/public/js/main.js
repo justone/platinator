@@ -8,10 +8,10 @@ var ButtonBar = React.createClass({//{{{
         return (
             <div className="btn-group btn-group-justified">
                 <div className="btn-group">
-                    <button type="button" className={blocked_button} onClick={this.props.toggleUI}>I'm Blocked</button>
+                    <button id="blocked_button" type="button" className={blocked_button} onClick={this.props.toggleUI}>I'm Blocked</button>
                 </div>
                 <div className="btn-group">
-                    <button type="button" className={blocking_button} onClick={this.props.toggleUI}>I'm Blocking</button>
+                    <button id="blocking_button" type="button" className={blocking_button} onClick={this.props.toggleUI}>I'm Blocking</button>
                 </div>
             </div>
         );
@@ -66,13 +66,12 @@ var TopLevel = React.createClass({//{{{
     getInitialState: function() {
         return { mode: "blocked" }
     },
-    toggleUI: function() {
-        var newMode = this.state.mode === 'blocked' ? 'blocking' : 'blocked';
-        console.log("test");
+    toggleUI: function(e) {
+        var newMode = e.target.id === 'blocked_button' ? 'blocked' : 'blocking';
         this.setState({mode: newMode});
     },
     render: function() {
-        var comp = this.state.mode === "blocked" ? <BlockedSearch/> :  <BlockingSearch/>;
+        var comp = this.state.mode === "blocked" ? <BlockedSearch/> : <BlockingSearch/>;
         return (
             <div className="col-sm-6">
                 <ButtonBar mode={this.state.mode} toggleUI={this.toggleUI}/>
