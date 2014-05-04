@@ -23,7 +23,7 @@ var BlockedSearch = React.createClass({//{{{
         return (
             <form role="form">
                 <div className="form-group">
-                    <label htmlFor="lic_or_tag" className="control-label">Licence or Tag Number</label>
+                    <label htmlFor="lic_or_tag" className="control-label">Licence Plate or Tag Number</label>
                     <input type="text" type="lic_or_tag" className="form-control" id="lic_or_tag" placeholder="1ABC456 or 1234"/>
                 </div>
                 <div className="btn-group btn-group-justified">
@@ -41,15 +41,15 @@ var BlockingSearch = React.createClass({//{{{
         return (
             <form role="form">
                 <div className="form-group">
-                    <label htmlFor="lic_or_tag" className="control-label">Licence or Tag Number</label>
+                    <label htmlFor="lic_or_tag" className="control-label">Licence Plate or Tag Number</label>
                     <input type="text" type="lic_or_tag" className="form-control" id="lic_or_tag" placeholder="1ABC456 or 1234"/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="name" className="control-label">Name</label>
+                    <label htmlFor="name" className="control-label">Your Name</label>
                     <input type="text" type="name" className="form-control" id="name" placeholder="John Doe"/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="leaving" className="control-label">Leaving?</label>
+                    <label htmlFor="leaving" className="control-label">When are you leaving (optional)</label>
                     <input type="text" type="leaving" className="form-control" id="leaving" placeholder="John Doe"/>
                 </div>
                 <div className="btn-group btn-group-justified">
