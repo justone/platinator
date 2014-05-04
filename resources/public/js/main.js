@@ -74,7 +74,7 @@ var TopLevel = React.createClass({//{{{
     render: function() {
         var comp = this.state.mode === "blocked" ? <BlockedSearch/> :  <BlockingSearch/>;
         return (
-            <div>
+            <div className="col-sm-6">
                 <ButtonBar mode={this.state.mode} toggleUI={this.toggleUI}/>
                 {comp}
             </div>
