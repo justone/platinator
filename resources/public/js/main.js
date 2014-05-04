@@ -28,7 +28,7 @@ var BlockedSearch = React.createClass({//{{{
                 </div>
                 <div className="btn-group btn-group-justified">
                     <div className="btn-group">
-                        <button type="submit" className="btn btn-default">Search </button>
+                        <button type="submit" className="btn btn-default">Find</button>
                     </div>
                 </div>
             </form>
@@ -54,7 +54,7 @@ var BlockingSearch = React.createClass({//{{{
                 </div>
                 <div className="btn-group btn-group-justified">
                     <div className="btn-group">
-                        <button type="submit" className="btn btn-default">Search </button>
+                        <button type="submit" className="btn btn-default">Find</button>
                     </div>
                 </div>
             </form>
