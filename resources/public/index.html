@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
+    <head><!--{{{-->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
@@ -9,7 +9,7 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
-            body {
+            body, form {
                 padding-top: 20px;
                 padding-bottom: 20px;
             }
@@ -20,44 +20,19 @@
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="js/vendor/JSXTransformer-0.10.0.js"></script>
         <script src="js/vendor/react-0.10.0.js"></script>
-    </head>
+    </head><!--}}}-->
     <body>
 
     <div class="container" style="text-align: center">
         <img src="platinator.png">
     </div>
 
-    <div class="container" style="padding-top: 20px">
-        <div class="btn-group btn-group-justified">
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary">I'm Blocked</button>
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-default">I'm Blocking</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" style="padding-top: 20px">
-        <form role="form">
-            <label for="lic_or_tag" class="control-label">Licence or Tag Number</label>
-            <div class="input-group">
-                <input type="text" type="lic_or_tag" class="form-control" id="lic_or_tag" placeholder="1ABC456 or 1234">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Search</button>
-                </span>
-            </div>
-        </form>
-    </div>
-
-    <div class="container" id="main">
+    <div class="container" style="padding-top: 20px" id="main">
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script type="text/jsx" src="js/main.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/jsx" src="js/main.js"></script>
     </body>
 </html>
