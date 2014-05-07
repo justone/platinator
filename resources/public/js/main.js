@@ -21,6 +21,7 @@ var ButtonBar = React.createClass({//{{{
 var BlockedSearch = React.createClass({//{{{
     render: function() {
         return (
+            <div>
             <form role="form">
                 <div className="form-group">
                     <label htmlFor="lic_or_tag" className="control-label">Licence Plate or Tag Number</label>
@@ -32,6 +33,7 @@ var BlockedSearch = React.createClass({//{{{
                     </div>
                 </div>
             </form>
+            </div>
         );
     }
 });//}}}
@@ -62,9 +64,27 @@ var BlockingSearch = React.createClass({//{{{
     }
 });//}}}
 
+var SearchResults = React.createClass({//{{{
+    render: function() {
+        return (
+            <table className="table">
+                {this.props.results.map(function(result, i){
+                    return (
+                        <tr key={i}>
+                            <td>{ result.name }</td>
+                            <td><button type="submit" className="btn btn-success">Email</button></td>
+                            <td><button type="submit" className="btn btn-success">Text</button></td>
+                        </tr>
+                    );
+                })}
+            </table>
+        );
+    }
+});//}}}
+
 var TopLevel = React.createClass({//{{{
     getInitialState: function() {
-        return { mode: "blocked" }
+        return { mode: "blocked", results: [{name: "Roy Ellis"}] }
     },
     toggleUI: function(e) {
         var newMode = e.target.id === 'blocked_button' ? 'blocked' : 'blocking';
@@ -76,6 +96,7 @@ var TopLevel = React.createClass({//{{{
             <div className="col-sm-6">
                 <ButtonBar mode={this.state.mode} toggleUI={this.toggleUI}/>
                 {comp}
+                <SearchResults results={this.state.results}/>
             </div>
         );
     }
