@@ -7,7 +7,6 @@
     [ring.util.response :refer [redirect]]
     [org.httpkit.server :refer [run-server]]
     [clojure.string :as string]
-    [platinator.reload :as reload]
     [clojure.java.browse :as browse]))
 
 (defroutes app-routes
@@ -19,7 +18,6 @@
   (site app-routes))
 
 (defn -main [port]
-  (reload/start-nstracker)
   (run-server (site #'app-routes) {:port (Integer. port)}))
 
 ;(comment
@@ -29,6 +27,5 @@
 (defn dev-server
   "Start a dev server with live-reload of namespaces"
   []
-  (reload/start-nstracker)
   (browse/browse-url "http://localhost:8080/")
   (-main 8080))
